@@ -1,0 +1,5 @@
+# dsh-save-balance-monitor bundle 层：插入插件行（恢复 profile 装配用）。
+- insert:
+    - id: dsh-save-balance-monitor
+      name: 'dsh-save-balance-monitor'
+      config: {}
