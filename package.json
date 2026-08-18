@@ -1,11 +1,12 @@
 {
-  "name": "dsh-opencode-go-monitor",
+  "name": "dsh-save-balance-monitor",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "省钱+余额监控悬浮窗（DSH Web UI 插件）：DeepSeek 余额/官网用量/金额单位/低价分析/高价区每小时限额/断点截断/低耗压缩/语音提醒",
+  "description": "省钱+余额监控悬浮窗（DSH Web UI 插件）：DeepSeek / OpenCode Go 双标签余额、限额监控（金额/tok/小时）、语音提醒、超限断点截断",
   "files": [
-    "lib"
+    "lib",
+    "cordis.patch.yml"
   ],
   "exports": {
     ".": "./lib/index.js",
@@ -13,6 +14,9 @@
     "./package.json": "./package.json"
   },
   "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
     "client": {
       "inject": [
         "@deepseek-ai/dsh-client-runtime",
@@ -20,5 +24,6 @@
       ],
       "platform": "web"
     }
-  }
+  },
+  "license": "BSD-3-Clause"
 }
